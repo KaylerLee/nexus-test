@@ -20,6 +20,10 @@ pipeline {
     }
 
     stages {
+        stage ("Node")
+        {
+             agent { label 'built-in' }
+        }
         stage("Check out") {
             steps {
                 script {
